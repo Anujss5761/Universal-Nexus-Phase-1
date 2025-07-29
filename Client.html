@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="auto_slider/stylev.css">
+    <link rel="stylesheet" href="accessible-navbar/stylenav.css">
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        /* Set height of body and the document to 100% */
+        /* body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial;
+        } */
+
+
+        .client-conteriner {
+            max-width: 1200px;
+            margin: 0 auto;
+            height: auto;
+        }
+
+
+        /* Style tab links */
+        .tablink {
+            /* background-color: #555; */
+            color: black;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 20%;
+            /* border: 2px solid black;
+            border-radius: 50px; */
+
+        }
+
+        .tablink:hover {
+            /* background-color: #777; */
+        }
+
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+            color: white;
+            display: none;
+            padding: 100px 20px;
+            height: 100%;
+
+        }
+
+        .client {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: beige;
+            border-radius: 10px;
+
+        }
+
+        #Home,
+        #News,
+        #Contact,
+        #About {
+            /* background-color: red; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 0 7%;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+            scrollbar-width: 0%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    
+    <!-- Navigation Bar -->
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false"
+        aria-controls="navbar">
+        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
+            <path
+                d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z" />
+        </svg>
+    </button>
+
+    <nav id="navbar">
+        <ul>
+            <li>
+                <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">
+                    <svg xmlns="#" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
+                        <path
+                            d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z" />
+                    </svg>
+                </button>
+            </li>
+            <li class="home-li"><a class="active-link" aria-current="page" href="index.html">Universal Nexus</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Clients</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a class="accent-link" href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+
+
+
+
+    <div class="container-ready" style="height: 60vh;">
+        <h1>Our Trusted Partners </h1>
+        <p>Take a look at the brands and businesses we've worked with and the great results we've achieved together.					
+					</p>
+    </div>
+
+
+    <!-- Image Grid Bar -->
+
+    <div class="client-container">
+
+        <button class="tablink" onclick="openPage('Home', this, 'white')">Fashion </button>
+        <button class="tablink" onclick="openPage('News', this, 'white')" id="defaultOpen">Beauty</button>
+        <button class="tablink" onclick="openPage('Contact', this, 'white')">Health & Wellness </button>
+        <button class="tablink" onclick="openPage('About', this, 'white')">Jewellery </button>
+        <button class="tablink" onclick="openPage('About', this, 'white')">Other</button>
+
+        <div id="Home" class="tabcontent">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+        </div>
+
+        <div id="News" class="tabcontent">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+        </div>
+
+        <div id="Contact" class="tabcontent">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+        </div>
+
+        <div id="About" class="tabcontent">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+            <img src="" alt="" class="client">
+        </div>
+
+        <div class="container-copy">
+            <p>&copy; 2023 Universal Nexus. All rights reserved.</p>
+            <p>Designed by </p>
+        </div>
+        
+
+    </div>
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+</body>
+
+</html>

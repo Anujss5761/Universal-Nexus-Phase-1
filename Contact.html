@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contuct Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="auto_slider/stylev.css">
+    <link rel="stylesheet" href="accessible-navbar/stylenav.css">
+
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false"
+        aria-controls="navbar">
+        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
+            <path
+                d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z" />
+        </svg>
+    </button>
+
+    <nav id="navbar">
+        <ul>
+            <li>
+                <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">
+                    <svg xmlns="#" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
+                        <path
+                            d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z" />
+                    </svg>
+                </button>
+            </li>
+            <li class="home-li"><a class="active-link" aria-current="page" href="index.html">Universal Nexus</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Clients</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a class="accent-link" href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+
+    <!-- Contact Us -->
+    <Section>
+        <div class="contact">
+            <div class="contact1">
+                <h1>We’re Just a Message Away</h1>
+                <p>Ready to grow, solve, or build something great? Contact our team of experts today.
+                </p>
+                <!-- <button>Whatsapp</button> -->
+            </div>
+            <div class="contact2">
+                <h1>Get Your Free Consultation </h1>
+                <form action="" method="post" name="contact-form">
+                    <span>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </span>
+                    <span>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </span>
+                    <span>
+                        <label for="numbers">Phone:</label>
+                        <input type="number" id="numbers" name="numbers" required>
+                    </span>
+                    <span>
+                        <label for="message">Message:</label>
+                    </span>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit" id="submit" value="Submit">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </Section>
+    <section>
+        <div class="address-contact">
+            <div class="adcon1">
+                <h1>visit us</h1>
+                <!-- Address -->
+                <p>926A, Opposite E Bus Stand, Sanjeev Nagar 2nd, Kanpur-208007 Uttar Pradesh, India
+                </p>
+                <i>Call us: 7253877470</i>
+            </div>
+            <div class="adcon2">
+                <button class="cont-whatsapp" onclick="sendwhatsapp()"   type="button">Whatsapp</button>
+            </div>
+        </div>
+        <div class="container-copy" style="width: 100%;">
+            <p>&copy; 2023 Universal Nexus. All rights reserved.</p>
+            <p>Designed by </p>
+        </div>
+    </section>
+    <script src="contuct.js"></script>
+  </script>
+
+  <script >
+    
+      function sendwhatsapp(){
+       var phonenumber = "+919415114790";
+
+    //    var name = document.querySelector(".name").value;
+    //    var email = document.querySelector(".email").value;
+    //    var country = document.querySelector(".country").value;
+    //    var message = document.querySelector(".message").value;
+
+       var url = "https://wa.me/" + phonenumber + "?text="
+    //    +"*Name :* "+name+"%0a"
+    //    +"*Email :* "+email+"%0a"
+    //    +"*Country:* "+country+"%0a"
+    //    +"*Message :* "+message
+    //    +"%0a%0a"
+       +"Hi 👋, I just visited your website and I'm interested in learning more. Could you please help me with the details?";
+
+       window.open(url, '_blank').focus();
+     }
+  </script>
+</body>
+
+</html>

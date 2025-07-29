@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+      <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="auto_slider/stylev.css">
+    <link rel="stylesheet" href="accessible-navbar/stylenav.css">
+</head>
+<body>
+
+     <!-- Navigation Bar -->
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false"
+        aria-controls="navbar">
+        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
+            <path
+                d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z" />
+        </svg>
+    </button>
+
+    <nav id="navbar">
+        <ul>
+            <li>
+                <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">
+                    <svg xmlns="#" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
+                        <path
+                            d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z" />
+                    </svg>
+                </button>
+            </li>
+            <li class="home-li"><a class="active-link" aria-current="page" href="index.html">Universal Nexus</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Clients</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a class="accent-link" href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+
+
+    <div class="container-ready" style="height: 90vh;">
+        <h1>Turn Visibility into Sales with High-Converting Amazon Campaigns</h1>
+        <p>At Universal Nexus, we help your products earn more reviews, higher ratings, and repeat buyers. Our tailored advertising strategies are built to boost your brand’s reputation and performance on Amazon — all while meeting your unique business goals.</p>
+    </div>
+           
+        <section>
+            <div class="about-contain">
+                
+                <div class="about-con2">
+                    <div class="about-con-mini">
+                        <h3>Genuine Reviews</h3>
+                        <p>We provide thoughtful, high-quality reviews written by actual customers. Each review is crafted to reflect real product use and experience, enhancing your brand’s trust and credibility.</p>
+                    </div>
+                    <div class="about-con-mini">
+                        <h3>5-Star Ratings</h3>
+                        <p>Our reviewers submit 5-star ratings for your products (where applicable), helping improve your product ranking and visibility within Amazon’s algorithm — a key driver of organic sales.</p>
+                    </div>
+                    <div class="about-con-mini">
+                        <h3>Amazing Seller Feedbacks</h3>
+                        <p>Positive seller feedback is crucial for brand reputation. We ensure your store receives glowing reviews that highlight reliability, service quality, and shipping speed — all factors that influence buying decisions.</p>
+                    </div>
+                    <div class="about-con-mini">
+                        <h3>Purchase Products</h3>
+                        <p>Our vetted team of real shoppers purchases your listed products to simulate authentic buyer experiences. This helps boost product engagement and builds initial momentum on your listings.</p>
+                    </div>
+                </div>
+
+                <div class="about-con1">
+                    <img src="Assets/logo-brand/audit.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="center-heading">
+            <div class="container-center">
+                <h1> We Offer</h1>
+            </div>
+        </section>
+
+
+        <section>
+            <div class="about-contain">
+                
+                <div class="about-con2">
+                     <div class="about-con-mini">
+                        <h3>Keyword Research & Audience Targeting</h3>
+                        <p>Our process begins with comprehensive keyword analysis to identify high-intent search terms, long-tail opportunities, and competitor benchmarks. We then develop advanced audience segmentation strategies to ensure your campaigns target the most relevant and profitable customer segments.</p>
+                    </div>
+                    <div class="about-con-mini">
+                        <h3>Performance Reporting & Analysis</h3>
+                        <p>Our reporting framework includes transparent, data-rich dashboards and periodic performance reviews. We monitor custom KPIs aligned to your business goals, providing strategic insights to guide campaign adjustments and growth opportunities.</p>
+                    </div>
+                    <div class="about-con-mini">
+                        <h3>Reputation Monitoring & Brand Protection</h3>
+                        <p>Our Online Reputation Management (ORM) solutions focus on safeguarding and enhancing your brand image. We monitor customer reviews, seller ratings, and public feedback across platforms, ensuring swift and professional responses to maintain trust and credibility.</p>
+                    </div>
+                </div>
+                <div class="about-con2">
+                    <div class="about-con-mini">
+                        <h3>Campaign Setup & Optimization</h3>
+                        <p>We implement structured campaign architectures, incorporating optimized ad groups, bidding strategies, and negative keyword filters to minimize inefficiencies. Continuous A/B testing of creatives and bidding models enables us to drive consistent performance improvement over time.</p>
+                    </div>
+                    <div class="about-con-mini">
+                        <h3>Search Engine Visibility</h3>
+                        <p>We enhance discoverability across Amazon and other digital marketplaces by optimizing listing content, leveraging SEO best practices, and employing advanced visibility strategies. This ensures your products remain competitive and easily accessible to potential customers.</p>
+                    </div>
+                    <div class="about-con-mini">
+                        <h3>Client-Centric Focus</h3>
+                        <p>At Universal Nexus, we adopt a consultative approach to ensure our strategies align with your unique business objectives. Through close collaboration and a deep understanding of your brand, we deliver customized solutions that drive long-term success.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        
+        <section>
+            <div class="about-contain" style="height: 80vh;">
+                <div class="about-con1" id="about-con1">
+                    <h3>Boost Your Amazon Ratings & Stand Out – Let's Get Started</h3>
+                    <h2>Increase your ⭐⭐⭐⭐⭐ product reviews with strategic solutions from Universal Nexus. We enhance visibility, build trust, and drive real buyer engagement—turning views into high ratings.	</h2>
+                     
+                </div>
+                <div class="about-con2">
+                    <a class="abt-cont-us" id="abt-cont-us" >Contact Us</a>
+                  
+                </div>
+            </div>
+        </section>
+
+
+          <div class="container-copy">
+            <p>&copy; 2023 Universal Nexus. All rights reserved.</p>
+            <p>Designed by </p>
+        </div>
+</body>
+</html>

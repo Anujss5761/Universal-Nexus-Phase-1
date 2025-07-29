@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+      <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="auto_slider/stylev.css">
+    <link rel="stylesheet" href="accessible-navbar/stylenav.css">
+</head>
+<body>
+
+     <!-- Navigation Bar -->
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false"
+        aria-controls="navbar">
+        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
+            <path
+                d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z" />
+        </svg>
+    </button>
+
+    <nav id="navbar">
+        <ul>
+            <li>
+                <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">
+                    <svg xmlns="#" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
+                        <path
+                            d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z" />
+                    </svg>
+                </button>
+            </li>
+            <li class="home-li"><a class="active-link" aria-current="page" href="index.html">Universal Nexus</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Clients</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a class="accent-link" href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+
+
+
+
+    <div class="container-ready" style="height: 60vh;">
+        <h1>Turning Goals into Growth. 
+        <br>Your Success, Our Mission.</h1>
+        <p>We’re not just marketers — we’re your growth partners. Fueled by strategy, driven by data, and powered by purpose, we help brands rise and thrive in the digital world.</p>
+    </div>
+
+     <!-- We are good in numbers -->
+
+        <section class="numbers">
+            <div class="container-numbers">
+                <h1>  Our Track Record Speaks for Itself</h1>
+                <div class="stats">
+                    <div class="stat-item">
+                        <h2>6+</h2>
+                        <p>Years of Experience</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2>350+</h2>
+                        <p>Successful Campaigns</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2>25+</h2>
+                        <p>Team Members</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2>AI</h2>
+                        <p>Powered Strategies</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="center-heading">
+            <div class="container-center">
+                <h1> Also managing top brands across</h1>
+            </div>
+        </section>
+            <div class="about-brand-s">
+                <img class="brand-img" src="images/brand.png" alt="">
+                <img class="brand-img" src="images/brand.png" alt="">
+                <img class="brand-img" src="images/brand.png" alt="">
+                <img class="brand-img" src="images/brand.png" alt="">
+            </div>
+
+        <section>
+            <div class="about-contain">
+                <div class="about-con1">
+                    <h3>Our Client is Our Mission</h3>
+                    <h2>We don’t just work for clients — we work with them. Your goals become our goals, and your success is the measure of our commitment. We grow when you do.</h2>
+                     <a class="abt-cont-us" href="">Contact Us</a>
+                </div>
+                <div class="about-con2">
+                    <div class="about-con-mini">
+                        <h3>Data driven startegy</h3>
+                        <p>We believe in smart decisions backed by real data. Our strategies are powered by analytics, ensuring every campaign is optimized for maximum impact, performance, and long-term business growth.</p>
+                    </div>
+                    <div class="about-con-mini">
+                        <h3>Long term pertnership</h3>
+                        <p>We don’t just deliver results—we build lasting relationships. Our team is committed to growing with you, supporting your brand through every challenge and success with trust, consistency, and dedication.</p>
+                    </div>
+                    <div class="about-con-mini">
+                        <h3>Brand demands work</h3>
+                        <p>Your brand deserves more than basic service. We dive deep, understand your vision, and execute strategies that reflect your goals—because powerful brands require focus, hard work, and sharp execution.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+          <div class="container-copy">
+            <p>&copy; 2023 Universal Nexus. All rights reserved.</p>
+            <p>Designed by </p>
+        </div>
+</body>
+</html>
