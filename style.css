@@ -1642,6 +1642,7 @@ html {
     border: 2px solid var(--primary-color);
     margin: 2%;
     border-radius: 10px;
+    color: var(--primary-color);
     padding: 2%;
       border: 3px solid #0000;
     border-radius: 12px;
@@ -1665,13 +1666,17 @@ html {
 .about-con1 .about-con-mini h3 {
     font-size: clamp(1em, 1.5vw, 1.2em);
     color: var(--primary-color);
-    margin-bottom: 0.3em;
-    font-family: 'Poppins', sans-serif;
+    /* margin-bottom: 0.3em; */
+    font-family: "Karla", sans-serif;
     font-weight: 700;
 }
 
 .about-con2 .about-con-mini p {
-    font-size: clamp(.8em, 1vw, 1em);
+    font-size: clamp(.7em, 1vw, 1em);
+    color: var(--primary-color);
+    /* margin-bottom: 0.3em; */
+    /* font-family: "Karla", sans-serif; */
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -1815,6 +1820,7 @@ html {
 
     #about-con-mini {
         width: 100%;
+        color: var(--primary-color);
     }
 
     #about-contain-ab {
