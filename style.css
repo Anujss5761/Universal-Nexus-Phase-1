@@ -1728,6 +1728,7 @@ html {
         flex-wrap: wrap; */
         height: 13vh;
         margin-bottom: 3%;
+        width: 98vw;
     }
 
     .brand-img {
