@@ -751,6 +751,12 @@ html {
     align-items: left;
     text-align: left;
     border-radius: var(--border-radius);
+     border: 3px solid #0000;
+    border-radius: 12px;
+    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(var(--angle),
+            #6633ee,
+            #6daabe, #d8f0fe) border-box;
+    animation: 6s rotate linear infinite;
 }
 
 .container-testimonials .testimonial-item:hover {
@@ -798,9 +804,15 @@ html {
 .container-testimonials .testimonial-item img {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: 50px;
     /* margin-bottom: 1em; */
     background-color: var(--accent-color);
+     border: 1.5px solid #0000;
+    border-radius: 12px;
+    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(var(--angle),
+            #6633ee,
+            #6daabe, #d8f0fe) border-box;
+    animation: 8s rotate linear infinite;
 }
 
 
