@@ -61,13 +61,74 @@
 
     <!-- Hero Section -->
 
-    <section class="hero">
-        <div class="container">
-            <h1> Build Trust. Boost Sales. <br>Helping Brands Win on Amazon
-            </h1>
-            <p>We help Amazon sellers grow with authentic reviews, higher ratings, <br>and trusted feedback that turns
-                product views into purchases.</p>
-            <a href="#container-visibility" class="btn" >Scroll Down</a>
+        <section class="hero" id="main-content">
+        <div class="hero-cursor" aria-hidden="true"></div>
+        <div class="hero-noise" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+
+        <div class="hero-container">
+            <div class="hero-copy">
+                <p class="hero-kicker">Amazon Growth Partner</p>
+                <h1 class="hero-title">Build Trust. Boost Sales. <span>Helping Brands Win on Amazon.</span></h1>
+                <p class="hero-description">We help Amazon sellers grow with authentic reviews, higher ratings, and trusted feedback that turns product views into confident purchases.</p>
+
+                <div class="hero-actions">
+                    <a href="Contact.html" class="hero-btn hero-btn-primary">Book Free Consultation</a>
+                    <a href="#container-visibility" class="hero-btn hero-btn-secondary">Explore Strategy</a>
+                </div>
+
+                <div class="hero-metrics">
+                    <div class="hero-metric hero-card">
+                        <strong>350+</strong>
+                        <span>Campaigns refined for Amazon growth</span>
+                    </div>
+                    <div class="hero-metric hero-card">
+                        <strong>4.8/5</strong>
+                        <span>Client satisfaction backed by real results</span>
+                    </div>
+                    <div class="hero-metric hero-card">
+                        <strong>24/7</strong>
+                        <span>Support for scaling brands and product launches</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-showcase hero-card">
+                    <div class="hero-showcase-top">
+                        <span class="hero-pill">Review Momentum</span>
+                        <span class="hero-score">+38% trust lift</span>
+                    </div>
+
+                    <div class="hero-graph" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="hero-review-card hero-card hero-float-card hero-float-one">
+                        <p>Ratings that turn product views into conversions.</p>
+                    </div>
+
+                    <div class="hero-review-card hero-card hero-float-card hero-float-two">
+                        <p>Sharper visibility. Better trust. Stronger sales.</p>
+                    </div>
+
+                    <div class="hero-dashboard">
+                        <div>
+                            <small>Seller rating</small>
+                            <strong>4.9/5</strong>
+                        </div>
+                        <div>
+                            <small>Review velocity</small>
+                            <strong>Weekly Growth</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -386,9 +447,11 @@
                         </div>
 
                         <div class="fvisit-m">
-                            <h3>visit us</h3>
+                            <h3>Reg. Office</h3>
                             <!-- Address -->
-                            <p>926A, Opposite E Bus Stand, Sanjeev Nagar 2nd, <br> kanpur-208007 Uttar Pradesh, India
+                            <p>Sector 25,
+Near DLF Cyber City / MG Road, <br>
+Gurugram, Haryana – 122002, India 
                             </p>
                         </div>
                         <!-- Visit Use -->
@@ -396,7 +459,7 @@
                             <!-- contact text -->
                             <p>Give us a call or drop a mail, we endeavor to answer all inquiries within 24 hours on
                                 business days.
-                                <br> +91 7985100926
+                                <br> +91 9415114790
                             </p>
                         </div>
 
@@ -437,13 +500,111 @@
             <p>Designed by UNM Developer Team </p>
         </div>
 
-        <script src="accessible-navbar/script.js" defer></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script>
+            (function () {
+                const hero = document.querySelector('.hero');
+                if (!hero) {
+                    return;
+                }
 
+                const cursor = hero.querySelector('.hero-cursor');
+                const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+                if (window.gsap && cursor) {
+                    gsap.set(cursor, { xPercent: -50, yPercent: -50 });
+                }
+
+                if (cursor) {
+                    const moveCursor = (event) => {
+                        const rect = hero.getBoundingClientRect();
+                        const x = event.clientX - rect.left;
+                        const y = event.clientY - rect.top;
+
+                        if (window.gsap && !prefersReducedMotion) {
+                            gsap.to(cursor, {
+                                x,
+                                y,
+                                duration: 0.45,
+                                ease: 'power3.out'
+                            });
+                        } else {
+                            cursor.style.left = x + 'px';
+                            cursor.style.top = y + 'px';
+                        }
+                    };
+
+                    hero.addEventListener('pointerenter', () => {
+                        cursor.style.opacity = '1';
+                    });
+
+                    hero.addEventListener('pointerleave', () => {
+                        cursor.style.opacity = '0';
+                    });
+
+                    hero.addEventListener('pointermove', moveCursor);
+                }
+
+                if (!window.gsap || prefersReducedMotion) {
+                    return;
+                }
+
+                gsap.set('.hero-kicker, .hero-title, .hero-description, .hero-actions, .hero-metric, .hero-showcase', {
+                    opacity: 0,
+                    y: 30
+                });
+
+                const timeline = gsap.timeline({ defaults: { ease: 'power3.out' } });
+                timeline
+                    .to('.hero-kicker', { opacity: 1, y: 0, duration: 0.5 })
+                    .to('.hero-title', { opacity: 1, y: 0, duration: 0.7 }, '-=0.2')
+                    .to('.hero-description', { opacity: 1, y: 0, duration: 0.55 }, '-=0.35')
+                    .to('.hero-actions', { opacity: 1, y: 0, duration: 0.55 }, '-=0.25')
+                    .to('.hero-metric', { opacity: 1, y: 0, duration: 0.45, stagger: 0.12 }, '-=0.2')
+                    .to('.hero-showcase', { opacity: 1, y: 0, duration: 0.8 }, '-=0.55');
+
+                gsap.to('.hero-orb-one', {
+                    y: -20,
+                    x: 18,
+                    duration: 5,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: 'sine.inOut'
+                });
+
+                gsap.to('.hero-orb-two', {
+                    y: 24,
+                    x: -16,
+                    duration: 6,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: 'sine.inOut'
+                });
+
+                gsap.to('.hero-float-one', {
+                    y: -14,
+                    duration: 2.8,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: 'sine.inOut'
+                });
+
+                gsap.to('.hero-float-two', {
+                    y: 12,
+                    duration: 3.2,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: 'sine.inOut'
+                });
+            })();
         </script>
+        <script src="accessible-navbar/script.js" defer></script>
 
 </body>
 
 
 </html>
+
+
 
 
